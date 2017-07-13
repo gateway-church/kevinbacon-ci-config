@@ -1,0 +1,20 @@
+fail_on_violations: true
+
+ruby:
+  config_file: /ruby/.rubocop.yml
+
+scss:
+  config_file: /scss/.scss-lint.yml
+
+coffeescript:
+  config_file: /coffeescript/.coffee-lint.json
+
+jshint:
+  config_file: /javascript/.jshintrc
+  ignore_file: /javascript/.jshintignore
+
+haml:
+  config_file: /haml/.haml-lint.yml
+
+swift:
+  config_file: /swift/.swift-lint.yml
