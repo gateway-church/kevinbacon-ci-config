@@ -93,8 +93,8 @@ linters:
   Indentation:
     enabled: true
     allow_non_nested_indentation: false
-    character: tab
-    width: 1
+    character: space
+    width: 2
 
   LeadingZero:
     enabled: true
@@ -239,19 +239,16 @@ linters:
       - border-right-width
       - border-bottom-width
       - border-left-width
-      -
       - border-style
       - border-top-style
       - border-right-style
       - border-bottom-style
       - border-left-style
-      -
       - border-radius
       - border-top-left-radius
       - border-top-right-radius
       - border-bottom-left-radius
       - border-bottom-right-radius
-      -
       - border-color
       - border-top-color
       - border-right-color
@@ -292,7 +289,6 @@ linters:
       - font-style
       - font-variant
       - font-weight
-      -
       - font-emphasize
       - font-emphasize-position
       - font-emphasize-style
@@ -317,7 +313,6 @@ linters:
       - text-wrap
       - word-wrap
       - word-break
-      -
       - text-emphasis
       - text-emphasis-color
       - text-emphasis-style
