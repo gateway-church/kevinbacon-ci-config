@@ -14,7 +14,7 @@ Style/Alias:
 Style/ArrayJoin:
   Description: 'Use Array#join instead of Array#*.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#array-join'
-  Enabled: false
+  Enabled: true
 
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
@@ -206,9 +206,9 @@ Style/LineEndConcatenation:
   Enabled: false
 
 Metrics/LineLength:
-  Description: 'Limit lines to 80 characters.'
+  Description: 'Limit lines to 120 characters.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#80-character-limits'
-  Max: 80
+  Max: 120
 
 Metrics/MethodLength:
   Description: 'Avoid methods longer than 10 lines of code.'
