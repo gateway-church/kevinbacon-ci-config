@@ -5,13 +5,15 @@ ruby:
 
 scss:
   config_file: /scss/.scss-lint.yml
+  exclude:
+    - "vendor/**/*.js"
+    - "node_modules"
 
 coffeescript:
   config_file: /coffeescript/.coffee-lint.json
 
 jshint:
   config_file: /javascript/.jshintrc
-  ignore_file: /javascript/.jshintignore
 
 haml:
   config_file: /haml/.haml-lint.yml
