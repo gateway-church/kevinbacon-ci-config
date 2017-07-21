@@ -137,7 +137,6 @@ linters:
       -
       - display
       - visibility
-      -
       - position
       - z-index
       - top
@@ -172,7 +171,6 @@ linters:
       - margin-right
       - margin-bottom
       - margin-left
-      -
       - padding
       - padding-top
       - padding-right
@@ -219,7 +217,6 @@ linters:
       - transition-duration
       - transition-timing-function
       - transition-delay
-      -
       - animation
       - animation-name
       - animation-duration
