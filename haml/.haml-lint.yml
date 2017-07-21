@@ -1,10 +1,16 @@
 # Whether to ignore frontmatter at the beginning of HAML documents for
 # frameworks such as Jekyll/Middleman
-skip_frontmatter: false
+skip_frontmatter: true
+exclude:
+  - "vendor/**/*"
+  - "spec/**/*"
 
 linters:
+  AlignmentTabs:
+    enabled: true
+
   AltText:
-    enabled: false
+    enabled: true
 
   ClassAttributeWithStaticValue:
     enabled: true
@@ -19,13 +25,28 @@ linters:
     enabled: true
     max_consecutive: 2
 
+  EmptyObjectReference:
+    enabled: true
+
   EmptyScript:
+    enabled: true
+
+  FinalNewline:
     enabled: true
 
   HtmlAttributes:
     enabled: true
 
+  IdNames:
+    enabled: true
+
   ImplicitDiv:
+    enabled: true
+
+  Indentation:
+    enabled: true
+
+  InlineStyles:
     enabled: true
 
   LeadingCommentSpace:
@@ -33,7 +54,7 @@ linters:
 
   LineLength:
     enabled: true
-    max: 80
+    max: 120
 
   MultilinePipe:
     enabled: true
@@ -42,6 +63,9 @@ linters:
     enabled: true
 
   ObjectReferenceAttributes:
+    enabled: true
+
+  RepeatedId:
     enabled: true
 
   RuboCop:
