@@ -49,6 +49,9 @@ linters:
   InlineStyles:
     enabled: true
 
+  InstanceVariables:
+    enabled: true
+
   LeadingCommentSpace:
     enabled: true
 
