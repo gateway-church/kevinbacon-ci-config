@@ -523,6 +523,9 @@ Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
+    - 'controllers/**/*'
+    - 'models/**/*'
+    - 'helpers/**/*'
 
 Style/DoubleNegation:
   Description: 'Checks for uses of double negation (!!).'
