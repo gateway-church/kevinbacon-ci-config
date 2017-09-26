@@ -16,7 +16,7 @@ linters:
 
   BemDepth:
     enabled: true
-    max_elements: 2
+    max_elements: 3
 
   BorderZero:
     enabled: true
@@ -114,7 +114,7 @@ linters:
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 6
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
@@ -427,8 +427,6 @@ linters:
   VariableForProperty:
     enabled: true
     properties:
-      - color
-      - background-color
       - font
 
   VendorPrefix:
