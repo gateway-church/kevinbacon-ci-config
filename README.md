@@ -11,7 +11,12 @@ _If you wish to modify one of the configs below is a list of where all of the do
 - [SCSS](https://github.com/brigade/scss-lint)
 - [Swift (Currently Unconfigured)](https://github.com/realm/SwiftLint)
 
-### SublimeLint Configuration
+### Editor Configurations
+- [Sublime](https://www.sublimetext.com/3)
+- [Visual Studio Code](https://code.visualstudio.com/download)
+
+### Sublime
+Follow the steps below to config Sublime text with all of the KevinBacon support linters and configs.
 1. Clone this repo with `git clone https://github.com/gateway-church/kevinbacon-ci-config.git`
 2. Install SublimeLint Package `CMD + SHIFT + P - SublimeLint`
 3. Install the following SublimeLint packages using the package manager like above
@@ -23,7 +28,7 @@ _If you wish to modify one of the configs below is a list of where all of the do
 4. Once those are installed navigate to `Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings User`
 5. Replace the config with the one below _Note: Be sure to swap out the paths with the place you cloned the repo to_
 
-#### SublimeLint Config
+#### Config
 ```
 {
     "user": {
@@ -122,4 +127,36 @@ _If you wish to modify one of the configs below is a list of where all of the do
         "wrap_find": true
     }
 }
+```
+
+### Visual Studio Code
+Follow the steps below to config KevinBacon Linters in Visual Studio Code
+1. Clone this repo with `git clone https://github.com/gateway-church/kevinbacon-ci-config.git`
+2. Install the extensions below 
+    - [scss-lint](https://marketplace.visualstudio.com/items?itemName=adamwalzer.scss-lint)
+    - [jshint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
+    - [coffeelint](https://marketplace.visualstudio.com/items?itemName=lkytal.coffeelinter)
+    - [ruby-rubocop](https://marketplace.visualstudio.com/items?itemName=misogi.ruby-rubocop)
+
+_Note: Haml Lint isn't support by Visual Studio Code quite yet_
+
+3. Navigate to your user settings `Code -> Preferences -> Settings` or `CMD + ,`
+4. Add the settings below to your user config _Note: Be sure to swap out the paths with the place you cloned the repo to_
+
+#### Config
+```
+"jshint.config": "/path/to/where/you/cloned/kevinbacon-ci-config/javascript/.jshintrc",
+"jshint.excludePath": "/path/to/where/you/cloned/kevinbacon-ci-config/javascript/.jshintignore",
+"scssLint.showHighlights": false,
+"scssLint.errorBackgroundColor": "rgba(200, 0, 0, .8)",
+"scssLint.warningBackgroundColor": "rgba(200, 120, 0, .8)",
+"scssLint.languages": [
+    "css",
+    "scss"
+],
+"scssLint.statusBarText": "`$(telescope) scss-lint  ${errors.length} $(x)  ${warnings.length} $(alert)`",
+"scssLint.configDir": "/path/to/where/you/cloned/kevinbacon-ci-config/scss/.scss-lint.yml",
+"ruby.rubocop.configFilePath": "/path/to/where/you/cloned/kevinbacon-ci-config/ruby/.rubocop.yml",
+"coffeelinter.defaultRules": "/path/to/where/you/cloned/kevinbacon-ci-config/coffeescript/.coffee-lint.json"
+
 ```
