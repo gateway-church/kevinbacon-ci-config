@@ -360,11 +360,6 @@ Naming/ConstantName:
   StyleGuide: '#screaming-snake-case'
   Enabled: true
 
-Naming/FileName:
-  Description: 'Use snake_case for source file names.'
-  StyleGuide: '#snake-case-files'
-  Enabled: true
-
 Naming/HeredocDelimiterCase:
   Description: 'Use configured case for heredoc delimiters.'
   StyleGuide: '#heredoc-delimiters'
@@ -573,6 +568,11 @@ Style/Encoding:
 Style/EvenOdd:
   Description: 'Favor the use of Integer#even? && Integer#odd?'
   StyleGuide: '#predicate-methods'
+  Enabled: true
+
+Style/FileName:
+  Description: 'Use snake_case for source file names.'
+  StyleGuide: '#snake-case-files'
   Enabled: true
 
 Style/FrozenStringLiteralComment:
