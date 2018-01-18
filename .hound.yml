@@ -6,7 +6,7 @@ ruby:
 scss:
   config_file: /scss/.scss-lint.yml
   exclude:
-    - "vendor/**/*.js"
+    - "vendor/**/*.scss"
     - "node_modules"
 
 coffeescript:
@@ -14,6 +14,9 @@ coffeescript:
 
 jshint:
   config_file: /javascript/.jshintrc
+  exclude:
+    - "vendor/**/*.js"
+    - "node_modules"
 
 haml:
   config_file: /haml/.haml-lint.yml
