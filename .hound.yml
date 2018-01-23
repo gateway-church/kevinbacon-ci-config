@@ -15,7 +15,7 @@ coffeescript:
 jshint:
   config_file: /javascript/.jshintrc
   exclude:
-    - "vendor/**/*.js"
+    - "vendor"
     - "node_modules"
 
 haml:

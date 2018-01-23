@@ -78,7 +78,7 @@ Layout/AlignParameters:
   StyleGuide: '#no-double-indent'
   Enabled: true
 
-Layout/BlockAlignment:
+Lint/BlockAlignment:
   Description: 'Align block ends correctly.'
   Enabled: true
 
@@ -99,14 +99,14 @@ Layout/CommentIndentation:
   Description: 'Indentation of comments.'
   Enabled: true
 
-Layout/ConditionPosition:
+Lint/ConditionPosition:
   Description: >-
                  Checks for condition placed in a confusing position relative to
                  the keyword.
   StyleGuide: '#same-line-condition'
   Enabled: true
 
-Layout/DefEndAlignment:
+Lint/DefEndAlignment:
   Description: 'Align ends corresponding to defs correctly.'
   Enabled: true
 
@@ -173,7 +173,7 @@ Layout/EmptyLinesAroundModuleBody:
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
 
-Layout/EndAlignment:
+Lint/EndAlignment:
   Description: 'Align ends correctly.'
   Enabled: true
 
@@ -443,10 +443,6 @@ Lint/AssignmentInCondition:
   StyleGuide: '#safe-assignment-in-condition'
   Enabled: true
 
-Lint/BigDecimalNew:
-  Description: '`BigDecimal.new()` is deprecated. Use `BigDecimal()` instead.'
-  Enabled: true
-
 Lint/BooleanSymbol:
   Description: 'Check for `:true` and `:false` symbols.'
   Enabled: true
@@ -683,18 +679,6 @@ Lint/UnifiedInteger:
   Description: 'Use Integer instead of Fixnum or Bignum'
   Enabled: true
 
-Lint/UnneededCopDisableDirective:
-  Description: >-
-                 Checks for rubocop:disable comments that can be removed.
-                 Note: this cop is not disabled when disabling all cops.
-                 It must be explicitly disabled.
-  Enabled: true
-
-Lint/UnneededCopEnableDirective:
-  Description: Checks for rubocop:enable comments that can be removed.
-
-  Enabled: true
-
 Lint/UnneededRequireStatement:
   Description: 'Checks for unnecessary `require` statement.'
   Enabled: true
@@ -861,18 +845,6 @@ Naming/MethodName:
 Naming/PredicateName:
   Description: 'Check the names of predicate methods.'
   StyleGuide: '#bool-methods-qmark'
-  Enabled: true
-
-Naming/UncommunicativeBlockParamName:
-  Description: >-
-                Checks for block parameter names that contain capital letters,
-                end in numbers, or do not meet a minimal length.
-  Enabled: true
-
-Naming/UncommunicativeMethodParamName:
-  Description: >-
-                Checks for method parameter names that contain capital letters,
-                end in numbers, or do not meet a minimal length.
   Enabled: true
 
 Naming/VariableName:
@@ -1275,10 +1247,6 @@ Security/MarshalLoad:
                  Avoid using of `Marshal.load` or `Marshal.restore` due to potential
                  security issues. See reference for more information.
   Reference: 'http://ruby-doc.org/core-2.3.3/Marshal.html#module-Marshal-label-Security+considerations'
-  Enabled: true
-
-Security/Open:
-  Description: 'The use of Kernel#open represents a serious security risk.'
   Enabled: true
 
 Security/YAMLLoad:
@@ -1935,15 +1903,6 @@ Style/TrailingBodyOnMethodDefinition:
 Style/TrailingCommaInArguments:
   Description: 'Checks for trailing comma in argument lists.'
   StyleGuide: '#no-trailing-params-comma'
-  Enabled: true
-
-Style/TrailingCommaInArrayLiteral:
-  Description: 'Checks for trailing comma in array literals.'
-  StyleGuide: '#no-trailing-array-commas'
-  Enabled: true
-
-Style/TrailingCommaInHashLiteral:
-  Description: 'Checks for trailing comma in hash literals.'
   Enabled: true
 
 Style/TrailingMethodEndStatement:
