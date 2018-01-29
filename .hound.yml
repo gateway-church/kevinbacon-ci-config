@@ -15,6 +15,7 @@ coffeescript:
 jshint:
   config_file: /javascript/.jshintrc
   exclude:
+    - "public"
     - "vendor"
     - "node_modules"
 
