@@ -78,7 +78,7 @@ Layout/AlignParameters:
   StyleGuide: '#no-double-indent'
   Enabled: true
 
-Lint/BlockAlignment:
+Layout/BlockAlignment:
   Description: 'Align block ends correctly.'
   Enabled: true
 
@@ -99,14 +99,14 @@ Layout/CommentIndentation:
   Description: 'Indentation of comments.'
   Enabled: true
 
-Lint/ConditionPosition:
+Layout/ConditionPosition:
   Description: >-
                  Checks for condition placed in a confusing position relative to
                  the keyword.
   StyleGuide: '#same-line-condition'
   Enabled: true
 
-Lint/DefEndAlignment:
+Layout/DefEndAlignment:
   Description: 'Align ends corresponding to defs correctly.'
   Enabled: true
 
@@ -173,7 +173,7 @@ Layout/EmptyLinesAroundModuleBody:
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
 
-Lint/EndAlignment:
+Layout/EndAlignment:
   Description: 'Align ends correctly.'
   Enabled: true
 
@@ -935,13 +935,6 @@ Performance/FlatMap:
   # This can be dangerous since `flat_map` will only flatten 1 level, and
   # `flatten` without any parameters can flatten multiple levels.
 
-Performance/HashEachMethods:
-  Description: >-
-                 Use `Hash#each_key` and `Hash#each_value` instead of
-                 `Hash#keys.each` and `Hash#values.each`.
-  StyleGuide: '#hash-each'
-  Enabled: true
-  AutoCorrect: false
 
 Performance/LstripRstrip:
   Description: 'Use `strip` instead of `lstrip.rstrip`.'
@@ -1571,7 +1564,12 @@ Style/MethodDefParentheses:
   StyleGuide: '#method-parens'
   Enabled: true
 
-Style/MethodMissing:
+Style/MethodMissingSuper:
+  Description: 'Avoid using `method_missing`.'
+  StyleGuide: '#no-method-missing'
+  Enabled: true
+  
+Style/MissingRespondToMissing:
   Description: 'Avoid using `method_missing`.'
   StyleGuide: '#no-method-missing'
   Enabled: true
