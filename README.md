@@ -162,10 +162,10 @@ _Note: Haml Lint isn't support by Visual Studio Code quite yet_
 
 
 ### Atom
-If you have not installed Atom, follow the instructions below for [Installing Atom](installing-atom).
+If you have not installed Atom, follow the instructions below for "Installing Atom".
 
-Then go through the instructions below for [Installing and Configuring Atom Linters](installing-and-configuring-atom-linters).
-Use the instructions for [Installing Atom Plugins](#installing-atom-plugins), anytime you are asked to install a plugin.
+Then go through the instructions below for "Installing and Configuring Atom Linters".
+Use the instructions for "Installing Atom Plugins", anytime you are asked to install a plugin.
 
 #### Installing Atom
 Download it from, https://atom.io/.  For Mac, unzip, and copy app to Applications folder. Double click file to run.
