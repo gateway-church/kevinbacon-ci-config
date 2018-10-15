@@ -14,6 +14,7 @@ _If you wish to modify one of the configs below is a list of where all of the do
 ### Editor Configurations
 - [Sublime](https://www.sublimetext.com/3)
 - [Visual Studio Code](https://code.visualstudio.com/download)
+- [Atom](#atom)
 
 ### Sublime
 Follow the steps below to config Sublime text with all of the KevinBacon support linters and configs.
@@ -158,3 +159,75 @@ _Note: Haml Lint isn't support by Visual Studio Code quite yet_
 "coffeelinter.defaultRules": "/path/to/where/you/cloned/kevinbacon-ci-config/coffeescript/.coffee-lint.json"
 
 ```
+
+
+### Atom
+If you have not installed Atom, follow the instructions below for [Installing Atom](installing-atom).
+
+Then go through the instructions below for [Installing and Configuring Atom Linters](installing-and-configuring-atom-linters).
+Use the instructions for [Installing Atom Plugins](#installing-atom-plugins), anytime you are asked to install a plugin.
+
+#### Installing Atom
+Download it from, https://atom.io/.  For Mac, unzip, and copy app to Applications folder. Double click file to run.
+
+__Verify Basic Editor Settings__
+From the menu bar, Click (select) "Atom" -> "Preferences" to open the settings page, and then click on "Editor" located in
+the left column.
+Make sure that:
+ - The following are checked: "Atomic Soft Tabs", "Auto Indent", "Auto Indent on Paste", "Confirm Checkout HEAD revision".
+ - The "Preferred line length" is set to "120".
+ - That "Soft tabs" is checked.
+ - That "Tab length" is "2".  That should be the editor's default value.
+ - "Tab type" is set to "Soft"
+
+Other settings you may want enabled: "Show Cursor on Selection", "Show Indent Guide", "Show Invisibles", "Show Line Numbers".
+
+Then click on the Packages tab, and search for "Whitespace". Click "Settings" under the "Whitespace" plugin, and make sure
+the following are checked: "Ensure Single Trailing New Line", "Keep Markdown Line Break Whitespace", and "Removing Trailing Whitespace".
+Make sure the following are not checked: "Ignore Whitespace on Current Line", and "Ignore Whitespace Only Lines".
+
+
+#### Installing Atom plugins
+As you go through the "Installing and Configuring linters" section, you will need to reference these instructions.
+1. In the menu click (select) "Atom" -> "Preferences". This should open the setting page.
+2. On the settings page, click (select) "Install" from the left column.
+3. Search for the plugin to install, and click the install button for that plugin.
+4. Click on Settings to modify settings.
+
+   In the instructions below you will be asked to install and configure plugins.
+   When a plugin configuration has {path-to-repo} you will need to replace that with the path to kevinbacon-ci-config.
+   For Mac an easy way to find this is to open finder and locate the folder, right click, then click "get info". Then
+   copy the path from the "Where" field, and add '/kevinbacon-ci-config'.
+
+#### Installing and Configuring Atom Linters.
+1. Clone this repo with `git clone https://github.com/gateway-church/kevinbacon-ci-config.git`.
+2. Make sure you have installed the following ruby gems.  If not install them.
+
+   - rubocop *( Is it installed: `gem list rubocop`. To install: `gem install rubocop` )*
+   - scss_lint *( Is it installed: `gem list scss_lint`. To install: `gem install scss_lint` )*
+
+3. Install the following Atom plugins (see [Installing Atom Plugins](#installing-atom-plugins))
+   - __linter-ui-default__
+
+   - __linter__  
+     Settings: verify the following are enabled: "lint preview tabs", "lint on open", "lint on change".
+
+   - __linter-haml__  
+     Settings: set "the coffeelint.json path" to "{path-to-repo}/coffeescript/.coffee-lint.json"
+
+   - __linter-jshint__  
+     Settings: set "Global Haml lint yml file" to {path-to-repo}/haml/.haml-lint.yml.
+
+   - __linter-rubocop__  
+     Settings: set "Command" to
+     "{path-to-rubocop-gem} --config path-to-repo}/ruby/.rubocop.yml"
+
+     *"{path-to-rubocop-gem}" should be replaced with the actual path to the gem file. To get that go to a command prompt and run `which rubocop`*
+
+   - __linter-scss-lint__  
+     Settings: set "Config Name" to "{path-to-repo}/scss/.scss-lint.yml", and "Executable Path" to the path to the lint-scss ruby gem.
+
+     *To get the path to your lint-scss gem, go to a command prompt and run `which scss-lint`.*
+
+   - __linter-coffeelint__  
+     Settings: set "coffeelint.json Path" to "{path-to-repo}/coffeescript/.coffee-lint.json"
