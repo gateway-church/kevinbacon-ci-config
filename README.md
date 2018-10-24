@@ -31,100 +31,63 @@ Follow the steps below to config Sublime text with all of the KevinBacon support
 
 #### Config
 ```
+// SublimeLinter Settings - User
 {
-  "debug": true,
+  "debug": false,
   "delay": 0,
-  "error_color": "D02000",
   "gutter_theme": "",
-  "gutter_theme_excludes": [],
-  "lint_mode": "load_save",
+  "lint_mode": "background",
   "linters": {
     "coffeelint": {
-      "@disable": false,
+      "disable": false,
       "args": [
         "--config",
-        "{path-to-repo}/coffeescript/.coffee-lint.json"
-      ],
-      "excludes": []
+        "{path-to-repo}/kevinbacon-ci-config/coffeescript/.coffee-lint.json"
+      ]
     },
     "haml": {
-      "@disable": false,
+      "disable": false,
       "args": [
         "--config",
-        "{path-to-repo}/haml/.haml-lint.yml"
-      ],
-      "excludes": []
+        "{path-to-repo}/kevinbacon-ci-config/haml/.haml-lint.yml"
+      ]
     },
     "hamllint": {
-      "@disable": false,
+      "disable": false,
       "args": [
         "--config",
-        "{path-to-repo}/haml/.haml-lint.yml"
-      ],
-      "excludes": []
+        "{path-to-repo}/kevinbacon-ci-config/haml/.haml-lint.yml"
+      ]
     },
     "jshint": {
-      "@disable": false,
+      "disable": false,
       "args": [
         "--config",
-        "~{path-to-repo}/javascript/.jshintrc"
-      ],
-      "excludes": []
+        "{path-to-repo}/kevinbacon-ci-config/javascript/.jshintrc"
+      ]
     },
     "rubocop": {
-      "@disable": false,
+      "disable": false,
       "args": [
         "--config",
-        "{path-to-repo}/ruby/.rubocop.yml"
-      ],
-      "excludes": []
+        "{path-to-repo}/kevinbacon-ci-config/ruby/.rubocop.yml"
+      ]
     },
-    "scss": {
-      "@disable": false,
+    "scsslint": {
+      "disable": false,
       "args": [
         "--config",
-        "{path-to-repo}/scss/.scss-lint.yml"
-      ],
-      "exclude-linter": "",
-      "excludes": [],
-      "include-linter": ""
+        "{path-to-repo}/kevinbacon-ci-config/scss/.scss-lint.yml"
+      ]
     }
   },
-  "mark_style": "outline",
-  "no_column_highlights_line": false,
-  "passive_warnings": false,
   "paths": {
     "linux": [],
     "osx": [
-      "~/.rbenv/shims/"
+      "~/.rbenv/shims"
     ],
     "windows": []
-  },
-  "python_paths": {
-    "linux": [],
-    "osx": [],
-    "windows": []
-  },
-  "rc_search_limit": 3,
-  "shell_timeout": 10,
-  "show_errors_on_save": true,
-  "show_marks_in_minimap": true,
-  "syntax_map": {
-    "html (django)": "html",
-    "html (rails)": "html",
-    "html 5": "html",
-    "javascript (babel)": "javascript",
-    "magicpython": "python",
-    "php": "html",
-    "python django": "python",
-    "pythonimproved": "python"
-  },
-  "tooltip_fontsize": "1rem",
-  "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
-  "tooltip_theme_excludes": [],
-  "tooltips": true,
-  "warning_color": "DDB700",
-  "wrap_find": true
+  }
 }
 ```
 
@@ -209,25 +172,25 @@ As you go through the "Installing and Configuring linters" section, you will nee
 3. Install the following Atom plugins (see [Installing Atom Plugins](#installing-atom-plugins))
    - __linter-ui-default__
 
-   - __linter__  
+   - __linter__
      Settings: verify the following are enabled: "lint preview tabs", "lint on open", "lint on change".
 
-   - __linter-haml__  
+   - __linter-haml__
      Settings: set "the coffeelint.json path" to "{path-to-repo}/coffeescript/.coffee-lint.json"
 
-   - __linter-jshint__  
+   - __linter-jshint__
      Settings: set "Global Haml lint yml file" to {path-to-repo}/haml/.haml-lint.yml.
 
-   - __linter-rubocop__  
+   - __linter-rubocop__
      Settings: set "Command" to
      "{path-to-rubocop-gem} --config path-to-repo}/ruby/.rubocop.yml"
 
      *"{path-to-rubocop-gem}" should be replaced with the actual path to the gem file. To get that go to a command prompt and run `which rubocop`*
 
-   - __linter-scss-lint__  
+   - __linter-scss-lint__
      Settings: set "Config Name" to "{path-to-repo}/scss/.scss-lint.yml", and "Executable Path" to the path to the lint-scss ruby gem.
 
      *To get the path to your lint-scss gem, go to a command prompt and run `which scss-lint`.*
 
-   - __linter-coffeelint__  
+   - __linter-coffeelint__
      Settings: set "coffeelint.json Path" to "{path-to-repo}/coffeescript/.coffee-lint.json"
