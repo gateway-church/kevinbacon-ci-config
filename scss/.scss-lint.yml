@@ -23,7 +23,7 @@ linters:
     convention: zero
 
   ChainedClasses:
-    enabled: true
+    enabled: false
 
   ColorKeyword:
     enabled: true
@@ -337,17 +337,17 @@ linters:
 
   QualifyingElement:
     enabled: true
-    allow_element_with_attribute: false
+    allow_element_with_attribute: true
     allow_element_with_class: false
     allow_element_with_id: false
 
   SelectorDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 6
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_BEM
+    convention: hyphenated_lowercase
 
   Shorthand:
     enabled: true
@@ -378,7 +378,7 @@ linters:
 
   SpaceAfterVariableColon:
     enabled: true
-    style: one_space
+    style: at_least_one_space
 
   SpaceAfterVariableName:
     enabled: true
@@ -430,7 +430,7 @@ linters:
       - font
 
   VendorPrefix:
-    enabled: true
+    enabled: false
     identifier_list: base
 
   ZeroUnit:
